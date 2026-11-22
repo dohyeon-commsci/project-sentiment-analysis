@@ -1,0 +1,26 @@
+﻿Sentiment Analysis of US Big Tech Earnings Calls
+
+
+Research Question: To what extent does the tone of executive remarks during quarterly earnings calls correlate with short-term abnormal stock returns across major technology companies?
+
+
+Companies: Apple, Microsoft, NVIDIA, Alphabet(GOOGL), Amazon, Meta, and Tesla
+
+
+Collecting Data
+In this project, I will combine public earnings call transcripts (Kaggle/Hugging Face datasets) with daily stock prices from the yfinance API. The sample covers the seven firms above, roughly 100 calls.
+
+
+Technique
+I will use and learn natural language processing for text analysis: cleaning and tokenizing transcripts and scoring tone with the Loughran-McDonald financial sentiment dictionary.  I will also learn to retrieve stock data through finance API and build interactive visualizations with Bokeh.
+
+
+Analysis
+IV: sentiment score of each call
+DV: abnormal return after the call
+
+
+The independent variable is the net sentiment score of each call, the equation of this variable: (positive - negative words) / total words. The dependent variable is one-day abnormal return after the call, the equation of this variable: stock return - market return. This will be measured from the next trading day since most calls occur after market close. I will examine their relationship with scatterplots and Spearman rank correlation. 
+
+
+The output will be on Jupyter Notebook with interactive Bokeh visualizations and a discussion of limitations.
